@@ -1,11 +1,11 @@
-title: Hexo
+title: chenyufei's blog
 subtitle: ''
-description: ''
+description: '' # chenyufei's personal blog
 keywords: null
 author: yufei chen
 language: en
-timezone: ''
-url: http://example.com
+timezone: 'Asia/Shanghai'
+url: https://yufei027.github.io
 permalink: ':year/:month/:day/:title/'
 permalink_defaults: null
 pretty_urls:
@@ -28,7 +28,7 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 syntax_highlighter: highlight.js
@@ -63,3 +63,8 @@ deploy:
   type: git
   repo: https://github.com/yufei027/yufei027.github.io.git
   branch: gh-pages
+# 订阅 RSS
+feed:
+    type: atom
+    path: atom.xml
+    limit: false

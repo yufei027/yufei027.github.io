@@ -100,7 +100,7 @@ head:
         # E.g., name=theme-color;content=#123456 => <meta name="theme-color" content="#123456">
         - ''
     # URL or path to the website's RSS atom.xml
-    rss: 
+    rss: /atom.xml
 # Page top navigation bar configurations
 navbar:
     # Navigation menu items
@@ -112,9 +112,9 @@ navbar:
         About: /about
     # Links to be shown on the right of the navigation bar
     links:
-        Download on GitHub:
-            icon: fab fa-github
-            url: https://github.com/ppoffice/hexo-theme-icarus
+        #Download on GitHub:
+            #icon: fab fa-github
+            #url: https://github.com/ppoffice/hexo-theme-icarus
 # Page footer configurations
 footer:
     # Copyright text
@@ -127,14 +127,13 @@ footer:
         Attribution 4.0 International:
             icon: fab fa-creative-commons-by
             url: https://creativecommons.org/licenses/by/4.0/
-        Download on GitHub:
-            icon: fab fa-github
-            url: https://github.com/ppoffice/hexo-theme-icarus
+
 # Article related configurations
 article:
     # Code highlight settings
     highlight:
         # Code highlight themes
+        # 代码高亮的配色主题。可修改为 Highlight.js 样式库 中的一个主题名称
         # https://github.com/highlightjs/highlight.js/tree/master/src/styles
         theme: atom-one-light
         # Show copy code button
@@ -142,8 +141,11 @@ article:
         # Default folding status of the code blocks. Can be "", "folded", "unfolded"
         fold: unfolded
     # Whether to show estimated article reading time
+    # 预估阅读时间
     readtime: true
-    # Whether to show updated time. For "auto", shows article update time only when page.updated is set and it is different from page.date
+    # Whether to show updated time. 
+    # For "auto", shows article update time only when page.updated is set and it is different from page.date
+    # 更新时间
     update_time: true
     # Article licensing block
     licenses:
@@ -215,6 +217,7 @@ sidebar:
     # Left sidebar configurations
     left:
         # Whether the sidebar sticks to the top when page scrolls
+        # false:滑动时跟随
         sticky: false
     # Right sidebar configurations
     right:
@@ -229,15 +232,15 @@ widgets:
         position: left
         type: profile
         # Author name
-        author: Your name
+        author: yufei chen
         # Author title
-        author_title: Your title
+        author_title: student
         # Author's current location
-        location: Your location
+        location: wuhan, china
         # URL or path to the avatar image
         avatar: 
         # Whether show the rounded avatar image
-        avatar_rounded: false
+        avatar_rounded: true
         # Email address for the Gravatar
         gravatar: 
         # URL or path for the follow button
@@ -247,22 +250,20 @@ widgets:
             Github:
                 icon: fab fa-github
                 url: https://github.com/ppoffice
-            Facebook:
-                icon: fab fa-facebook
-                url: https://facebook.com
             Twitter:
                 icon: fab fa-twitter
                 url: https://twitter.com
-            Dribbble:
-                icon: fab fa-dribbble
-                url: https://dribbble.com
+            Email:
+                icon: fas fa-envelope
+                url: mailto:chenyufei@whu.edu.cn
             RSS:
                 icon: fas fa-rss
-                url: /
+                url: /atom.xml
     # Table of contents widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
         position: left
+        # 类型为 Table of Contents（目录）
         type: toc
         # Whether to show the index of each heading
         index: true
@@ -278,7 +279,7 @@ widgets:
         # Names and URLs of the sites
         links:
             Hexo: https://hexo.io
-            Bulma: https://bulma.io
+            Icarus1: https://ppoffice.github.io/hexo-theme-icarus
     # Categories widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
@@ -305,24 +306,7 @@ widgets:
         amount: 
         # Whether to show tags count, i.e. number of posts in the tag.
         show_count: true
-    # Google FeedBurner email subscription widget configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: left
-        type: subscribe_email
-        # Hint text under the email input
-        description: 
-        # Feedburner ID
-        feedburner_id: ''
-    # Google AdSense unit configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: left
-        type: adsense
-        # AdSense client ID
-        client_id: ''
-        # AdSense AD unit ID
-        slot_id: ''
+
     # Follow.it email subscription widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
