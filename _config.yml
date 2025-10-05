@@ -2,7 +2,7 @@ title: Hexo
 subtitle: ''
 description: ''
 keywords: null
-author: John Doe
+author: yufei chen
 language: en
 timezone: ''
 url: http://example.com
@@ -62,4 +62,4 @@ theme: icarus
 deploy:
   type: git
   repo: https://github.com/yufei027/yufei027.github.io.git
-  branch: main
+  branch: gh-pages
