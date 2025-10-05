@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>chenyufei&#39;s blog</title>
+  
+  
+  <link href="https://yufei027.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://yufei027.github.io/"/>
+  <updated>2025-10-05T15:51:23.665Z</updated>
+  <id>https://yufei027.github.io/</id>
+  
+  <author>
+    <name>yufei chen</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>中文的语言现象</title>
+    <link href="https://yufei027.github.io/2025/10/05/%E4%B8%AD%E6%96%87%E7%9A%84%E8%AF%AD%E8%A8%80%E7%8E%B0%E8%B1%A1/"/>
+    <id>https://yufei027.github.io/2025/10/05/%E4%B8%AD%E6%96%87%E7%9A%84%E8%AF%AD%E8%A8%80%E7%8E%B0%E8%B1%A1/</id>
+    <published>2025-10-05T15:45:09.000Z</published>
+    <updated>2025-10-05T15:51:23.665Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="动词后加“的”是如何改变语义的？"><a href="#动词后加“的”是如何改变语义的？" class="headerlink" title="动词后加“的”是如何改变语义的？"></a>动词后加“的”是如何改变语义的？</h1>]]></content>
+    
+    
+    <summary type="html">偶然想到：动词后加“的”会改变语义的一个语言现象</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://yufei027.github.io/2025/07/12/hello-world/"/>
+    <id>https://yufei027.github.io/2025/07/12/hello-world/</id>
+    <published>2025-07-11T16:13:05.949Z</published>
+    <updated>2025-10-05T14:35:20.035Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
