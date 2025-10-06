@@ -3,7 +3,9 @@ subtitle: ''
 description: '' # chenyufei's personal blog
 keywords: null
 author: yufei chen
-language: en
+language: 
+- zh-CN
+- en
 timezone: 'Asia/Shanghai'
 url: https://yufei027.github.io
 permalink: ':year/:month/:day/:title/'

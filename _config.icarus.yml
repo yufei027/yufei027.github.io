@@ -109,7 +109,7 @@ navbar:
         Archives: /archives
         Categories: /categories
         Tags: /tags
-        About: /about
+        About: /About-Me
     # Links to be shown on the right of the navigation bar
     links:
         #Download on GitHub:
@@ -142,7 +142,7 @@ article:
         fold: unfolded
     # Whether to show estimated article reading time
     # 预估阅读时间
-    readtime: true
+    readtime: false
     # Whether to show updated time. 
     # For "auto", shows article update time only when page.updated is set and it is different from page.date
     # 更新时间
@@ -169,48 +169,16 @@ search:
 comment:
     type: disqus
     # Disqus shortname
-    shortname: ''
+    shortname: https-yufei027-github-io
 # Donate plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Donation/
-donates:
-    # "Afdian.net" donate button configurations
-    -
-        type: afdian
-        # URL to the "Afdian.net" personal page
-        url: ''
-    # Alipay donate button configurations
-    -
-        type: alipay
-        # Alipay qrcode image URL
-        qrcode: ''
-    # "Buy me a coffee" donate button configurations
-    -
-        type: buymeacoffee
-        # URL to the "Buy me a coffee" page
-        url: ''
-    # Patreon donate button configurations
-    -
-        type: patreon
-        # URL to the Patreon page
-        url: ''
-    # Paypal donate button configurations
-    -
-        type: paypal
-        # Paypal business ID or email address
-        business: ''
-        # Currency code
-        currency_code: USD
-    # Wechat donate button configurations
-    -
-        type: wechat
-        # Wechat qrcode image URL
-        qrcode: ''
+# 这里删去了donate部分，如果需要，访问上面链接查询你
 # Share plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Share/
 share:
     type: sharethis
     # URL to the ShareThis share plugin script
-    install_url: ''
+    install_url: 'https://platform-api.sharethis.com/js/sharethis.js#property=68e3745c37188172019442d7&product=sop'
 # Sidebar configurations.
 # Please be noted that a sidebar is only visible when it has at least one widget
 sidebar:
@@ -232,7 +200,7 @@ widgets:
         position: left
         type: profile
         # Author name
-        author: yufei chen
+        author: chen yufei
         # Author title
         author_title: student
         # Author's current location
@@ -242,17 +210,17 @@ widgets:
         # Whether show the rounded avatar image
         avatar_rounded: true
         # Email address for the Gravatar
-        gravatar: 
+        gravatar: ccgx3882666@gmail.com
         # URL or path for the follow button
-        follow_link: https://github.com/ppoffice
+        follow_link: https://github.com/yufei027
         # Links to be shown on the bottom of the profile widget
         social_links:
             Github:
                 icon: fab fa-github
-                url: https://github.com/ppoffice
+                url: https://github.com/yufei027
             Twitter:
                 icon: fab fa-twitter
-                url: https://twitter.com
+                url: https://x.com/yufei_chen0998
             Email:
                 icon: fas fa-envelope
                 url: mailto:chenyufei@whu.edu.cn
@@ -279,7 +247,7 @@ widgets:
         # Names and URLs of the sites
         links:
             Hexo: https://hexo.io
-            Icarus1: https://ppoffice.github.io/hexo-theme-icarus
+            Icarus: https://ppoffice.github.io/hexo-theme-icarus
     # Categories widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
@@ -315,9 +283,9 @@ widgets:
         # Hint text under the email input
         description: 
         # Subscription form action URL
-        action_url: ''
+        action_url: 'https://api.follow.it/subscription-form/MnN6NDlmaDBqSHRhQ0d4U255M3haVHNzQkJkWjlHQXdUTEZnZmRSdlNzZk4xOXBFSGFHMFBsdStMNDNkNTZ4Q1c1ckNMN1dxU2V3dUlDanc5dzYyRE4wMzA5YmxKenRuMTZSWXREVUw4SXd5YlZqTXRyaEdKTjdLbU1sOGg1OTR8SWRFek44UEZseXlSS2VoUnJOWDZBeTliVkpKWTVhUFU2WkI3NThCWVQ5RT0=/8'
         # Feed claiming verification code
-        verification_code: ''
+        verification_code: 'MWjru6ztgkbVTtzSNRaY'
 # Plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/
 plugins:
