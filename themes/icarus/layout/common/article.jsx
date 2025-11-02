@@ -4,7 +4,6 @@ const { toMomentLocale } = require('hexo/dist/plugins/helper/date');
 const Share = require('./share');
 const Donates = require('./donates');
 const Comment = require('./comment');
-const ArticleLicensing = require('hexo-component-inferno/lib/view/misc/article_licensing');
 
 /**
  * Get the word count of text.
@@ -20,7 +19,7 @@ function getWordCount(content) {
 
 module.exports = class extends Component {
     render() {
-        const { config, helper, page, index } = this.props;
+        const { config, helper, page, index, site } = this.props;
         const { article, plugins } = config;
         const { url_for, date, date_xml, __, _p } = helper;
 
@@ -92,15 +91,51 @@ module.exports = class extends Component {
                     {page.title !== '' && !index ? <h1 class="title is-3 is-size-4-mobile">{page.title}</h1> : null}
                     {/* Content/Excerpt */}
                     <div class="content" dangerouslySetInnerHTML={{ __html: index && page.excerpt ? page.excerpt : page.content }}></div>
-                    {/* Licensing block */}
-                    {!index && article && article.licenses && Object.keys(article.licenses)
-                        ? <ArticleLicensing.Cacheable page={page} config={config} helper={helper} /> : null}
                     {/* Tags */}
                     {!index && page.tags && page.tags.length ? <div class="article-tags is-size-7 mb-4">
                         <span class="mr-2">#</span>
                         {page.tags.map(tag => {
                             return <a class="link-muted mr-2" rel="tag" href={url_for(tag.path)}>{tag.name}</a>;
                         })}
+                    </div> : null}
+                    {/* Article metadata footer - Author, Published Date, Updated Date, License */}
+                    {!index ? <div class="article-metadata-footer is-size-7 mt-5 mb-4">
+                        <div class="level is-mobile">
+                            <div class="level-left">
+                                {(() => {
+                                    // Get author from page, site config, or config
+                                    const author = page.author || (site && site.author) || config.author;
+                                    return author ? <div class="level-item">
+                                        <span class="mr-2">{__('article.licensing.author')}:</span>
+                                        <span>{author}</span>
+                                    </div> : null;
+                                })()}
+                                {page.date ? <div class="level-item">
+                                    <span class="mr-2">{__('article.licensing.created_at')}:</span>
+                                    <time dateTime={date_xml(page.date)} title={new Date(page.date).toLocaleString()}>{date(page.date)}</time>
+                                </div> : null}
+                                {shouldShowUpdated && page.updated ? <div class="level-item">
+                                    <span class="mr-2">{__('article.licensing.updated_at')}:</span>
+                                    <time dateTime={date_xml(page.updated)} title={new Date(page.updated).toLocaleString()}>{date(page.updated)}</time>
+                                </div> : null}
+                            </div>
+                        </div>
+                        {/* License information */}
+                        {article && article.licenses && Object.keys(article.licenses).length > 0 ? <div class="level is-mobile mt-3">
+                            <div class="level-left">
+                                <div class="level-item">
+                                    <span class="mr-2">{__('article.licensing.licensed_under')}:</span>
+                                    <span class="icons">
+                                        {Object.keys(article.licenses).map(name => {
+                                            const license = article.licenses[name];
+                                            return <a class="icon" href={url_for(typeof license === 'string' ? license : license.url)} target="_blank" rel="noopener" title={name}>
+                                                <i class={typeof license === 'string' ? '' : license.icon}></i>
+                                            </a>;
+                                        })}
+                                    </span>
+                                </div>
+                            </div>
+                        </div> : null}
                     </div> : null}
                     {/* "Read more" button */}
                     {index && page.excerpt ? <a class="article-more button is-small is-size-7" href={`${url_for(page.link || page.path)}#more`}>{__('article.more')}</a> : null}
