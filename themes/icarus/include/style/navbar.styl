@@ -7,6 +7,9 @@ $navbar-item-margin-v ?= 0
 $navbar-item-margin-h ?= 0
 
 .navbar-main
+    position: relative
+    z-index: 2100
+
     box-shadow: $shadow
 
     .navbar-container
@@ -17,11 +20,12 @@ $navbar-item-margin-h ?= 0
         display: flex
         padding: 0
         flex-shrink: 0
+        overflow: visible
 
     .navbar-menu
         flex-grow: 1
         flex-shrink: 0
-        overflow-x: auto
+        overflow: visible
 
     .navbar-start
         justify-content: flex-start
@@ -31,11 +35,116 @@ $navbar-item-margin-h ?= 0
         justify-content: flex-end
         margin-left: auto
 
+    .language-switcher
+        position: relative
+        display: flex
+        align-items: center
+        overflow: visible
+
+        .language-dropdown
+            position: relative
+            display: inline-flex
+            overflow: visible
+
+        .language-dropdown-toggle
+            display: inline-flex
+            align-items: center
+            gap: .35rem
+            background-color: rgba(255, 255, 255, .12)
+            color: inherit
+            font-size: .85rem
+            font-weight: 500
+            padding: .4rem .85rem
+            border-radius: 999px
+            border: none
+            cursor: pointer
+            transition: background-color .18s ease, box-shadow .18s ease, transform .18s ease
+            outline: none
+
+        .language-dropdown-toggle:hover,
+        .language-dropdown-toggle:focus-visible
+            background-color: rgba(255, 255, 255, .18)
+            box-shadow: 0 .35rem 1rem rgba(0, 0, 0, .08)
+
+        .language-dropdown.is-open .language-dropdown-toggle
+            background-color: rgba(255, 255, 255, .2)
+            box-shadow: 0 .45rem 1.35rem rgba(0, 0, 0, .12)
+
+        .language-dropdown-icon,
+        .language-dropdown-caret
+            pointer-events: none
+            font-size: .85rem
+
+        .language-dropdown-icon
+            margin-right: .15rem
+
+        .language-dropdown-menu
+            position: fixed
+            top: 0
+            left: 0
+            min-width: 9rem
+            padding: .35rem
+            margin: 0
+            border-radius: .75rem
+            background-color: rgba(26, 26, 26, .95)
+            color: inherit
+            box-shadow: 0 .75rem 2rem rgba(0, 0, 0, .25)
+            backdrop-filter: blur(18px)
+            opacity: 0
+            transform: translateY(-1rem) scale(.95)
+            transform-origin: top center
+            pointer-events: none
+            transition: opacity .2s ease, transform .2s ease
+            z-index: 4000
+            list-style: none
+            max-height: 14rem
+            overflow-y: auto
+            scroll-behavior: smooth
+            border: 1px solid rgba(255, 255, 255, .06)
+            backdrop-filter: blur(18px)
+
+        .language-dropdown-menu li
+            list-style: none
+
+        .language-dropdown.is-open .language-dropdown-menu
+            opacity: 1
+            transform: translateY(0) scale(1)
+            pointer-events: auto
+
+        .language-dropdown-item
+            width: 100%
+            display: flex
+            align-items: center
+            justify-content: space-between
+            gap: .35rem
+            padding: .45rem .7rem
+            border-radius: .6rem
+            border: none
+            background: transparent
+            color: inherit
+            font-size: .85rem
+            font-weight: 500
+            cursor: pointer
+            transition: background-color .18s ease, color .18s ease
+
+        .language-dropdown-item:hover:not(.is-active)
+            background-color: rgba(255, 255, 255, .12)
+
+        .language-dropdown-item.is-active
+            cursor: default
+            background-color: rgba(255, 255, 255, .2)
+            font-weight: 600
+
+        .language-dropdown-item:disabled
+            cursor: default
+
     .navbar-item
         display: flex
         align-items: center
         padding: $navbar-item-padding-v $navbar-item-padding-h
         margin: $navbar-item-margin-v $navbar-item-margin-h
+        position: relative
+        overflow: visible
 
         &.is-active
             background-color: transparent
@@ -58,3 +167,32 @@ $navbar-item-margin-h ?= 0
 @media screen and (min-width: $desktop)
     .navbar > .container .navbar-menu, .container > .navbar .navbar-menu
         margin-right: 0rem
+
+html[data-theme='light']
+    .navbar-main
+        .language-switcher
+            .language-dropdown-toggle
+                background-color: rgba(0, 0, 0, .05)
+                color: rgba(20, 20, 20, .88)
+                box-shadow: 0 .35rem 1rem rgba(0, 0, 0, .04)
+
+            .language-dropdown-toggle:hover,
+            .language-dropdown-toggle:focus-visible
+                background-color: rgba(0, 0, 0, .08)
+                box-shadow: 0 .35rem 1.2rem rgba(0, 0, 0, .08)
+
+            .language-dropdown.is-open .language-dropdown-toggle
+                background-color: rgba(0, 0, 0, .1)
+                box-shadow: 0 .45rem 1.4rem rgba(0, 0, 0, .12)
+
+            .language-dropdown-menu
+                background-color: rgba(255, 255, 255, .98)
+                color: #141414
+                box-shadow: 0 1rem 2.2rem rgba(0, 0, 0, .14)
+                border: 1px solid rgba(0, 0, 0, .08)
+
+            .language-dropdown-item:hover:not(.is-active)
+                background-color: rgba(0, 0, 0, .06)
+
+            .language-dropdown-item.is-active
+                background-color: rgba(0, 0, 0, .08)

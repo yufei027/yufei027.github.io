@@ -64,3 +64,11 @@ search:
     no_result: 'No results for'
     untitled: '(Untitled)'
     empty_preview: '(No preview)'
+navbar:
+    language_switcher: 'Change language'
+    languages:
+        default: 'Default'
+        zh-CN: 'Simplified Chinese'
+        zh: 'Chinese'
+        en: 'English'
+        ja: 'Japanese'

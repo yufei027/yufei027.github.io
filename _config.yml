@@ -6,6 +6,7 @@ author: yufei chen
 language: 
 - zh-CN
 - en
+- ja
 timezone: 'Asia/Shanghai'
 url: https://yufei027.github.io
 permalink: ':year/:month/:day/:title/'

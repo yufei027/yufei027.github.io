@@ -64,3 +64,11 @@ search:
     no_result: 'の結果はありません'
     untitled: '(無題)'
     empty_preview: '(プレビューなし)'
+navbar:
+    language_switcher: '言語を選択'
+    languages:
+        default: 'デフォルト'
+        zh-CN: '簡体字中国語'
+        zh: '中国語'
+        en: '英語'
+        ja: '日本語'

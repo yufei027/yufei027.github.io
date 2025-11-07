@@ -169,6 +169,7 @@ module.exports = class extends Component {
             {hlTheme ? <link data-pjax rel="stylesheet" href={cdn('highlight.js', '11.7.0', 'styles/' + hlTheme + '.css')} /> : null}
             <link rel="stylesheet" href={fontCssUrl[variant]} />
             <link data-pjax rel="stylesheet" href={url_for('/css/' + variant + '.css')} />
+            <script dangerouslySetInnerHTML={{ __html: "(function(){try{var d=document.documentElement;var stored=localStorage.getItem('icarus-theme');var m=window.matchMedia?window.matchMedia('(prefers-color-scheme: dark)'):null;var theme=stored==='dark'||stored==='light'?stored:(m&&m.matches?'dark':'light');d.setAttribute('data-theme', theme);d.style.colorScheme=theme;}catch(e){}})();" }}></script>
             <Plugins site={site} config={config} helper={helper} page={page} head={true} />
 
             {adsenseClientId ? <script data-ad-client={adsenseClientId}

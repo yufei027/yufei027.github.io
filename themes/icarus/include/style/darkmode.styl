@@ -1,0 +1,146 @@
+// Dark mode overrides
+
+html[data-theme='dark']
+    color-scheme: dark
+
+    body
+        background-color: #111827
+        color: #e5e7eb
+
+    a
+        color: #93c5fd
+
+    a:hover
+        color: #bfdbfe
+
+    .navbar
+        background-color: rgba(15, 23, 42, 0.92)
+        box-shadow: 0 1px 2px rgba(15, 23, 42, 0.6)
+
+    .navbar .navbar-item,
+    .navbar .navbar-item:visited
+        color: #e5e7eb
+
+    .navbar .navbar-item:hover,
+    .navbar .navbar-item.is-active
+        background-color: rgba(59, 130, 246, 0.12)
+        color: #bfdbfe
+
+    .navbar-menu
+        background-color: transparent
+
+    .theme-toggle
+        cursor: pointer
+
+    .theme-toggle .button,
+    .theme-toggle
+        color: #e5e7eb
+
+    .card,
+    .article,
+    .widget,
+    .tile,
+    .comment,
+    .menu,
+    .panel
+        background-color: #1f2937
+        color: #e5e7eb
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.38)
+
+    .card .card-header,
+    .card .card-footer
+        border-color: rgba(148, 163, 184, 0.25)
+
+    .card-content,
+    .menu-list a,
+    .menu-label,
+    .panel-heading,
+    .panel-block
+        color: inherit
+
+    .menu-list a:hover,
+    .menu-list a.is-active,
+    .panel-block.is-active
+        background-color: rgba(59, 130, 246, 0.12)
+        color: #bfdbfe
+
+    .article .article-meta time,
+    .article .article-meta span,
+    .article .article-meta i
+        color: #9ca3af
+
+    .article .content h1,
+    .article .content h2,
+    .article .content h3,
+    .article .content h4,
+    .article .content h5,
+    .article .content h6
+        color: #f9fafb
+
+    .article .content blockquote
+        background-color: rgba(59, 130, 246, 0.08)
+        border-left-color: rgba(59, 130, 246, 0.5)
+        color: inherit
+
+    .article .content table,
+    .table
+        background-color: transparent
+        color: inherit
+
+    .article .content table thead,
+    .table thead
+        background-color: rgba(148, 163, 184, 0.12)
+
+    .article .content table td,
+    .article .content table th,
+    .table td,
+    .table th
+        border-color: rgba(148, 163, 184, 0.2)
+
+    figure.highlight,
+    pre,
+    code,
+    kbd,
+    samp
+        background-color: #0f172a
+        color: #e0f2fe
+
+    figure.highlight .code .line span[class^='hljs-']
+        color: inherit
+
+    .pagination .pagination-previous,
+    .pagination .pagination-next,
+    .pagination .pagination-link
+        background-color: #1f2937
+        border-color: rgba(148, 163, 184, 0.2)
+        color: inherit
+
+    .pagination .pagination-link.is-current
+        background-color: rgba(59, 130, 246, 0.25)
+        border-color: rgba(59, 130, 246, 0.5)
+        color: #bfdbfe
+
+    .tag
+        background-color: rgba(59, 130, 246, 0.18)
+        border-color: transparent
+        color: #bfdbfe
+
+    .section,
+    .footer
+        background-color: #111827
+        color: inherit
+
+    .footer a
+        color: #93c5fd
+
+    .footer a:hover
+        color: #bfdbfe
+
+    .navbar .search i,
+    .navbar .catalogue i,
+    .navbar .theme-toggle i
+        color: inherit
+
+html[data-theme='light']
+    color-scheme: light
+
